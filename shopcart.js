@@ -41,7 +41,7 @@ items.forEach(function (ele) {
     div.addEventListener('click',function(){
 let name = ele.item.toLocaleLowerCase();
 console.log(name);
-    
+    // if/else statement to add qty 
     if(!cart[name]){
 cart[name]={
     name:ele.item,
