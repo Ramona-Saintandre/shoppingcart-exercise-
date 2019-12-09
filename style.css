@@ -1,0 +1,10 @@
+body {
+    background-color:  rgb(184, 184, 194);
+}
+p {
+    text-align: center;
+    font-size: 2em;
+    font-style: oblique;
+    font-weight: bold;
+    color: rgb(90, 139, 139);
+}
