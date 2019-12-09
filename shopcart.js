@@ -74,6 +74,7 @@ for(let prod in cart){
     output.innerHTML+=`${cart[prod].name}$${subTotal}<br>`;
 }
 
+
     }
     document.body.appendChild(div);
 })
