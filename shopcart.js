@@ -70,7 +70,7 @@ let total = 0;
 for(let prod in cart){
     console.log(cart[prod]);
     let subTotal = cart[prod].subtotal();
-    output.innerHTML+=`${cart[prod].name}$${cart[prod].price}x`;
+    output.innerHTML+=`${cart[prod].name}$${cart[prod].price} x `;
     output.innerHTML+=`${cart[prod].name}$${subTotal}<br>`;
 }
 
