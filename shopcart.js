@@ -29,7 +29,12 @@ const items = [{
         id: 0
     },
 ];
+
 const cart = {};
+const output =document.createElement('div');
+document.body.appendChild(output);
+
+
 items.forEach(function (ele) {
     // console.log(ele);
     let div = document.createElement('div');
@@ -53,9 +58,26 @@ cart[name]={
 }}else{
     cart[name].qty;
 }
+
+relist();
+
     })
+
+    function relist(){
+output.innerHTML="";
+console.log(cart);
+let total = 0;
+for(let prod in cart){
+    console.log(cart[prod]);
+    let subTotal = cart[prod].subtotal();
+    output.innerHTML+=`${cart[prod].name}$${cart[prod].price}x`;
+    output.innerHTML+=`${cart[prod].name}$${subTotal}<br>`;
+}
+
+    }
     document.body.appendChild(div);
 })
+
 
 // adding the event listner 
 
