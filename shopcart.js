@@ -56,7 +56,7 @@ cart[name]={
         return this.price * this.qty
     }
 }}else{
-    cart[name].qty;
+    cart[name].qty++;
 }
 
 relist();
@@ -70,10 +70,12 @@ let total = 0;
 for(let prod in cart){
     console.log(cart[prod]);
     let subTotal = cart[prod].subtotal();
-    output.innerHTML+=`${cart[prod].name}$${cart[prod].price} x `;
-    output.innerHTML+=`${cart[prod].name}$${subTotal}<br>`;
+    total =+ subTotal;
+    output.innerHTML+=`${cart[prod].name} $${cart[prod].price} x `;
+    output.innerHTML+=`${cart[prod].qty} $${subTotal} <br>`;
 }
 
+output.innerHTML += `<b>Total = $${total} </b>`;
 
     }
     document.body.appendChild(div);
